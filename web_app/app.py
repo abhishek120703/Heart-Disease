@@ -39,7 +39,7 @@ DATASET_PATH = ROOT / "data" / "plant_village"
 CHECKPOINT_PATH = ROOT / "checkpoints" / "best_model.pth"
 
 # Load classes
-CLASSES = sorted([p.name for p in DATASET_PATH.iterdir() if p.is_dir()])
+CLASSES = json.load(open("classes.json"))
 
 # Load model once
 print("[INFO] Loading model for Flask app...")
@@ -98,3 +98,4 @@ from flask import send_from_directory
 # ------------------------------------------------------------
 if __name__ == "__main__":
     app.run(debug=True)
+
