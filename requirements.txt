@@ -1,0 +1,36 @@
+# -----------------------------------------------------------
+# Requirements for AI-Driven Crop Disease Prediction System
+# Python 3.13 Compatible
+# -----------------------------------------------------------
+
+# Core
+numpy>=1.26
+pandas>=2.2
+pillow>=10.0
+matplotlib>=3.8
+scikit-learn>=1.5
+
+# Computer Vision / Utils
+opencv-python-headless>=4.8
+python-dotenv>=1.0
+
+# Flask Web App
+flask>=3.0
+
+# timm Models (EfficientNet, ConvNeXt, etc.)
+timm>=0.9
+
+# TensorBoard for training visualization
+tensorboard>=2.10
+
+# Torch - install manually depending on CPU/GPU
+# DO NOT INSTALL THROUGH THIS FILE.
+# Install manually:
+#   CPU Only:
+#       pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+#
+#   GPU (CUDA 12.1):
+#       pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# Jupyter (optional)
+jupyterlab
