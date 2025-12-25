@@ -40,7 +40,26 @@ DATASET_PATH = ROOT / "data" / "plant_village"
 CHECKPOINT_PATH = ROOT / "checkpoints" / "best_model.pth"
 
 # Load classes
-CLASSES = json.load(open("classes.json"))
+CLASSES = [
+    "Pepper___Bacterial_spot",
+    "Pepper___healthy",
+
+    "Potato___Early_blight",
+    "Potato___Late_blight",
+    "Potato___healthy",
+
+    "Tomato___Bacterial_spot",
+    "Tomato___Early_blight",
+    "Tomato___Late_blight",
+    "Tomato___Leaf_Mold",
+    "Tomato___Septoria_leaf_spot",
+    "Tomato___Spider_mites",
+    "Tomato___Target_Spot",
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+    "Tomato___Tomato_mosaic_virus",
+    "Tomato___healthy"
+]
+
 
 # Load model once
 print("[INFO] Loading model for Flask app...")
@@ -99,5 +118,6 @@ from flask import send_from_directory
 # ------------------------------------------------------------
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
